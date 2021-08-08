@@ -1,0 +1,45 @@
+{
+  "name": "mcqs",
+  "version": "0.0.8",
+  "description": "Superbook: mcqs by babaji",
+  "keywords": [
+    "superbook",
+    "bookiza"
+  ],
+  "author": "babaji <malhotravarundr@gmail.com> (https://bubblin.io/babaji)",
+  "license": "BOL",
+  "homepage": "https://bubblin.io/babaji",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github/project/url/here"
+  },
+  "scripts": {
+    "postinstall": "node ./crust/scripts/ready.js"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "book-length": "^1.2.1",
+    "browser-sync": "^2.27.5",
+    "chalk": "^4.1.2",
+    "del": "^6.0.0",
+    "delayed": "^2.0.0",
+    "fs-extra": "^10.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-haml": "^1.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-less": "^5.0.0",
+    "gulp-markdown": "^6.0.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-stylus": "^2.7.0",
+    "js-cookie": "^3.0.0",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
