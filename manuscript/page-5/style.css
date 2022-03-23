@@ -1,0 +1,24 @@
+.footnote {
+  text-align: center;
+  height: 20vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 3.5vw;
+}
+
+
+.pad-vertically{
+	padding-top: 10vh;
+}
+
+h1#title {
+  color: rgb(167, 69, 72);
+  font-size: 5.5vmin;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 4.5vmin;
+  margin: 0 auto;
+}
