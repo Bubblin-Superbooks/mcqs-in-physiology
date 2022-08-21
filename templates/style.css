@@ -5,14 +5,14 @@ body {
   overflow: hidden;
   color: #000;
   height: 100vh;
-  width: 100vw;
+  width: 100vmin;
   font-family: 'EB Garamond', serif;
   font-style: normal;
   font-synthesis: none;
   font-stretch: ultra-condensed;
   font-variant: no-common-ligatures proportional-nums slashed-zero;
-  font-size: 4vw;
-  line-height: calc(4vw * 1.50);
+  font-size: 4vmin;
+  line-height: calc(4vmin * 1.50);
   font-kerning: normal;
   text-rendering: geometricPrecision;
 }
@@ -24,12 +24,12 @@ h4,
 h5 {
   width: 100%;
   text-align: center;
-  line-height: calc(1.5 * 4vw * 1.50);
+  line-height: calc(1.5 * 4vmin * 1.50);
 }
 
 h5,
 h6 {
-  line-height: calc(1 * 4vw * 1.50);
+  line-height: calc(1 * 4vmin * 1.50);
 }
 
 h1,
@@ -46,34 +46,35 @@ h6 {
 }
 
 h1 {
-  font-size: 8vw;
+  font-size: 8vmin;
 }
 
 h2 {
-  font-size: 6vw;
+  font-size: 6vmin;
 }
 
 h3 {
-  font-size: 5vw;
+  font-size: 5vmin;
 }
 
 h4 {
-  font-size: 4vw;
+  font-size: 4vmin;
+  color: rgba(200, 200, 200, 0.85);
 }
 
 h5 {
-  font-size: 4vw;
+  font-size: 4vmin;
 }
 
 h6 {
-  font-size: 4vw;
+  font-size: 4vmin;
 }
 
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   display:block;
-  margin: calc(1/2 * 4vw * 1.50) auto;
+  margin: calc(1/2 * 4vmin * 1.50) auto;
 
 }
 
@@ -95,21 +96,21 @@ a:active {
 }
 
 p {
-  text-indent: 5vw;
+  text-indent: 0vmin;
   margin: 0 0 0 0;
 }
 
 p.start-chapter {
   text-indent: 0;
-  margin: calc(5 * 4vw * 1.50 - 2px) auto 0;
+  margin: calc(2 * 4vmin * 1.50 - 2px) auto 0;
 }
 
 p.start-chapter:first-letter {
   display: inline-block;
-  margin: 0 1vw 0 0;
+  margin: 0 1vmin 0 0;
   float: left;
-  font-size: calc(3 * 4vw); /* three times normal size */
-  line-height: calc(2 * 4vw * 1.50 * 0.95);
+  font-size: calc(3 * 4vmin); /* three times normal size */
+  line-height: calc(2 * 4vmin * 1.50 * 0.95);
   font-family: 'Berkshire Swash', cursive;
 }
 
@@ -120,7 +121,7 @@ blockquote {
   position: relative;
   quotes: "\201C""\201D""\2018""\2019";
   margin: calc( 1/2 * (150vh *(1115/1443))/100 * 7/5) auto;
-  margin: calc( 1/2 * 4vw * 1.50) 0;
+  margin: calc( 1/2 * 4vmin * 1.50) 0;
   margin: 0 0;
   display: inline-block;
   width: 100%;
@@ -145,15 +146,15 @@ code {
   font-synthesis: none;
   font-stretch: ultra-condensed;
   font-variant: no-common-ligatures proportional-nums slashed-zero;
-  font-size: 4vw;
-  line-height: calc(4vw * 1.50);
+  font-size: 4vmin;
+  line-height: calc(4vmin * 1.50);
   font-kerning: normal;
   text-rendering: geometricPrecision;
   /*background: pink;*/
 }
 
 ol {
-  margin: calc((4vw * 1.50)/2) 5vw;
+  margin: calc((4vmin * 1.50)/2) 5vmin;
   padding: 0;
   list-style-type: none;
   counter-reset: step-counter calc(var(--start) - 1);
@@ -165,25 +166,25 @@ ol li {
 
 ol li::before {
   content: counter(step-counter) ". ";
-  margin-right: 1vw;
+  margin-right: 1vmin;
   color: black;
   font-weight: bold;
-  padding: 0.3vw 0.8vw 0.3vw 0;
+  padding: 0.3vmin 0.8vmin 0.3vmin 0;
 }
 
 ol li.split-li {}
 
 ol li.split-li::before {
   content: '';
-  margin-right: -0.8vw;
+  margin-right: -0.8vmin;
   background-color: rgba(255, 255, 255, 1);
   color: black;
   font-weight: bold;
-  padding: 0.3vw 0.8vw 0.3vw 0;
+  padding: 0.3vmin 0.8vmin 0.3vmin 0;
 }
 
 ul {
-  margin: 0 0 0 5vw;
+  margin: 0 0 0 5vmin;
   padding: 0;
   list-style: none;
 }
@@ -196,9 +197,9 @@ ul li {
 hr.section {
   border: 0;
   text-align: center;
-  height: calc(4vw * 1.50);
+  height: calc(4vmin * 1.50);
   /* Take a break of two lines only. */
-  margin: calc((4vw * 1.50)/2) 0;
+  margin: calc((4vmin * 1.50)/2) 0;
 }
 
 hr.section::after {
@@ -213,9 +214,9 @@ hr.section::before {
 hr.chapter {
   border: 0;
   text-align: center;
-  height: calc(4vw * 1.50);
+  height: calc(4vmin * 1.50);
   /* Take a break of two lines only. */
-  margin: calc((4vw * 1.50)/2) 0;
+  margin: calc((4vmin * 1.50)/2) 0;
 }
 
 hr.chapter::after {
@@ -230,9 +231,9 @@ hr.chapter::before {
 hr {
   border: 0;
   text-align: center;
-  height: calc(4vw * 1.50);
+  height: calc(4vmin * 1.50);
   /* Take a break of two lines only. */
-  margin: calc((4vw * 1.50)/2) 0;
+  margin: calc((4vmin * 1.50)/2) 0;
 }
 
 hr::after {
@@ -265,15 +266,15 @@ hr::before {
   height: 100%;
   height: 100vh;
   width: 100%;
-  width: 100vw;
+  width: 100vmin;
   margin: auto;
 }
 
 .inner {
-  margin: calc((100vh - (17 * (4vw * 1.5) + 4vw))/2) auto;
-  width: 85vw;
-  height: calc(17 * (4vw * 1.5) + 4vw);
-  max-height: calc(17 * (4vw * 1.5) + 4vw);
+  margin: calc((100vh - (17 * (4vmin * 1.5) + 4vmin))/2) auto;
+  width: 85vmin;
+  height: calc(17 * (4vmin * 1.5) + 4vmin);
+  max-height: calc(17 * (4vmin * 1.5) + 4vmin);
   break-after: right;
   display:inline-block;
   /* background: aliceblue; */  /* enable to see the maximum staging area */
@@ -318,7 +319,7 @@ p.stretch-para {
 }
 
 .pad-vertically {
-  padding: calc(4vw * 1) 0;
+  padding: calc(4vmin * 1) 0;
 }
 
 .center {

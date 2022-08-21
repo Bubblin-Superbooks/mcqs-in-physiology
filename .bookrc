@@ -11,11 +11,12 @@
   },
   "status": "draft",
   "asset_url": "",
-  "book_url": "",
+  "book_url": "https://bubblin.io/book/mcqs-by-dr-varun-malhotra",
   "mode": {
     "HTML": "html",
     "CSS": "css",
     "JS": "js",
     "HEAD": "html"
-  }
+  },
+  "book_id": 1428
 }
