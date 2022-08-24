@@ -16,7 +16,7 @@ body {
 
 html,
 body {
-  background: #fff;
+  background: #efefef;
   margin: 0 0;
   overflow: hidden;
   color: #000;
@@ -27,8 +27,8 @@ body {
   font-synthesis: none;
   font-stretch: ultra-condensed;
   font-variant: no-common-ligatures proportional-nums slashed-zero;
-  font-size: 4vmin;
-  line-height: calc(4vmin * 1.50);
+  font-size: 3.6vmin;
+  line-height: calc(3.6vmin * 1.50);
   font-kerning: normal;
   text-rendering: geometricPrecision;
 }
@@ -145,69 +145,6 @@ blockquote {
 
 blockquote p, blockquote em {
   margin: 0 auto !important;
-}
-
-pre,
-code {
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-family: 'EB Garamond', serif;
-  font-style: normal;
-  font-synthesis: none;
-  font-stretch: ultra-condensed;
-  font-variant: no-common-ligatures proportional-nums slashed-zero;
-  font-size: 4vmin;
-  line-height: calc(4vmin * 1.50);
-  font-kerning: normal;
-  text-rendering: geometricPrecision;
-  /*background: pink;*/
-}
-
-ol {
-  margin: calc((4vmin * 1.50)/2) 5vmin;
-  padding: 0;
-  list-style-type: none;
-  counter-reset: step-counter calc(var(--start) - 1);
-}
-
-ol li {
-  counter-increment: step-counter;
-}
-
-ol li::before {
-  content: counter(step-counter) ". ";
-  margin-right: 1vmin;
-  color: black;
-  font-weight: bold;
-  padding: 0.3vmin 0.8vmin 0.3vmin 0;
-}
-
-ol li.split-li {}
-
-ol li.split-li::before {
-  content: '';
-  margin-right: -0.8vmin;
-  background-color: rgba(255, 255, 255, 1);
-  color: black;
-  font-weight: bold;
-  padding: 0.3vmin 0.8vmin 0.3vmin 0;
-}
-
-ul {
-  margin: 0 0 0 5vmin;
-  padding: 0;
-  list-style: square;
-}
-
-ul li {
-  margin: 0;
-  padding: 0;
 }
 
 hr.section {
