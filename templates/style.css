@@ -45,7 +45,7 @@ h5 {
 
 h5,
 h6 {
-  line-height: calc(1 * 4vmin * 1.50);
+  line-height: calc(1 * 4vmin * 1.250);
 }
 
 h1,
@@ -112,7 +112,7 @@ a:active {
 }
 
 p {
-  text-indent: 0vmin;
+  text-indent: 0;
   margin: 0 0 0 0;
 }
 
@@ -202,7 +202,7 @@ ol li.split-li::before {
 ul {
   margin: 0 0 0 5vmin;
   padding: 0;
-  list-style: none;
+  list-style: square;
 }
 
 ul li {
