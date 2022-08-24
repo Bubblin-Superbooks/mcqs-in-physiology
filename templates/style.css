@@ -1,3 +1,19 @@
+@charset "UTF-8";
+
+@supports (padding: max(0px)) {
+  body,
+  footer,
+  header {
+    padding-left: min(0vmin, env(safe-area-inset-left));
+    padding-right: min(0vmin, env(safe-area-inset-right));
+  }
+}
+
+
+body {
+  min-height: fill-available;
+}
+
 html,
 body {
   background: #fff;

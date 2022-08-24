@@ -1,5 +1,5 @@
-(function () {
-    var questions = [
+(($) => {
+    const questions = [
       {
         question: "What is 2*5?",
         choices: [2, 5, 10, 15, 20],
@@ -27,15 +27,15 @@
       }
     ];
   
-    var questionCounter = 0; //Tracks question number
-    var selections = []; //Array containing user choices
-    var quiz = $("#quiz"); //Quiz div object
+    let questionCounter = 0; //Tracks question number
+    let selections = []; //Array containing user choices
+    const quiz = $("#quiz"); //Quiz div object
   
     // Display initial question
     displayNext();
   
     // Click handler for the 'next' button
-    $("#next").on("click", function (e) {
+    $("#next").on("click", e => {
       e.preventDefault();
   
       // Suspend click listener during fade animation
@@ -54,7 +54,7 @@
     });
   
     // Click handler for the 'prev' button
-    $("#prev").on("click", function (e) {
+    $("#prev").on("click", e => {
       e.preventDefault();
   
       if (quiz.is(":animated")) {
@@ -66,7 +66,7 @@
     });
   
     // Click handler for the 'Start Over' button
-    $("#start").on("click", function (e) {
+    $("#start").on("click", e => {
       e.preventDefault();
   
       if (quiz.is(":animated")) {
@@ -89,17 +89,17 @@
     // Creates and returns the div that contains the questions and
     // the answer selections
     function createQuestionElement(index) {
-      var qElement = $("<div>", {
+      const qElement = $("<div>", {
         id: "question"
       });
   
-      var header = $("<h6>Question " + (index + 1) + ":</h6>");
+      const header = $(`<h6>Question ${index + 1}:</h6>`);
       qElement.append(header);
   
-      var question = $("<p>").append(questions[index].question);
+      const question = $("<p>").append(questions[index].question);
       qElement.append(question);
   
-      var radioButtons = createRadios(index);
+      const radioButtons = createRadios(index);
       qElement.append(radioButtons);
   
       return qElement;
@@ -107,12 +107,12 @@
   
     // Creates a list of the answer choices as radio inputs
     function createRadios(index) {
-      var radioList = $("<ul>");
-      var item;
-      var input = "";
-      for (var i = 0; i < questions[index].choices.length; i++) {
+      const radioList = $("<ul>");
+      let item;
+      let input = "";
+      for (let i = 0; i < questions[index].choices.length; i++) {
         item = $("<li>");
-        input = '<input type="radio" name="answer" value=' + i + " />";
+        input = `<input type="radio" name="answer" value=${i} />`;
         input += questions[index].choices[i];
         item.append(input);
         radioList.append(item);
@@ -127,14 +127,14 @@
   
     // Displays next requested element
     function displayNext() {
-      quiz.fadeOut(function () {
+      quiz.fadeOut(() => {
         $("#question").remove();
   
         if (questionCounter < questions.length) {
-          var nextQuestion = createQuestionElement(questionCounter);
+          const nextQuestion = createQuestionElement(questionCounter);
           quiz.append(nextQuestion).fadeIn();
           if (!isNaN(selections[questionCounter])) {
-            $("input[value=" + selections[questionCounter] + "]").prop(
+            $(`input[value=${selections[questionCounter]}]`).prop(
               "checked",
               true
             );
@@ -148,7 +148,7 @@
             $("#next").show();
           }
         } else {
-          var scoreElem = displayScore();
+          const scoreElem = displayScore();
           quiz.append(scoreElem).fadeIn();
           $("#next").hide();
           $("#prev").hide();
@@ -159,23 +159,19 @@
   
     // Computes score and returns a paragraph element to be displayed
     function displayScore() {
-      var score = $("<p>", { id: "question" });
+      const score = $("<p>", { id: "question" });
   
-      var numCorrect = 0;
-      for (var i = 0; i < selections.length; i++) {
+      let numCorrect = 0;
+      for (let i = 0; i < selections.length; i++) {
         if (selections[i] === questions[i].correctAnswer) {
           numCorrect++;
         }
       }
   
       score.append(
-        "You got " +
-          numCorrect +
-          " questions out of " +
-          questions.length +
-          " right!!!"
+        `You got ${numCorrect} questions out of ${questions.length} right!!!`
       );
       return score;
     }
-  })();
+  })(jQuery);
   
