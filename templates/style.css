@@ -16,7 +16,7 @@ body {
 
 html,
 body {
-  background: #efefef;
+  background: #fff;
   margin: 0 0;
   overflow: hidden;
   color: #000;
@@ -45,7 +45,7 @@ h5 {
 
 h5,
 h6 {
-  line-height: calc(1 * 4vmin * 1.250);
+  line-height: calc(1 * 4vmin * 1.2);
 }
 
 h1,
@@ -75,15 +75,15 @@ h3 {
 
 h4 {
   font-size: 4vmin;
-  color: rgba(200, 200, 200, 0.85);
+  color: rgba(100, 100, 100, 0.85);
 }
 
 h5 {
-  font-size: 4vmin;
+  font-size: 3vmin;
 }
 
 h6 {
-  font-size: 4vmin;
+  font-size: 2.5vmin;
 }
 
 img {
@@ -115,21 +115,6 @@ p {
   text-indent: 0;
   margin: 0 0 0 0;
 }
-
-p.start-chapter {
-  text-indent: 0;
-  margin: calc(2 * 4vmin * 1.50 - 2px) auto 0;
-}
-
-p.start-chapter:first-letter {
-  display: inline-block;
-  margin: 0 1vmin 0 0;
-  float: left;
-  font-size: calc(3 * 4vmin); /* three times normal size */
-  line-height: calc(2 * 4vmin * 1.50 * 0.95);
-  font-family: 'Berkshire Swash', cursive;
-}
-
 
 blockquote {
   text-align: center;
@@ -224,13 +209,14 @@ hr::before {
 }
 
 .inner {
-  margin: calc((100vh - (17 * (4vmin * 1.5) + 4vmin))/2) auto;
-  width: 85vmin;
-  height: calc(17 * (4vmin * 1.5) + 4vmin);
-  max-height: calc(17 * (4vmin * 1.5) + 4vmin);
+  /* margin: calc((100vh - (17 * (4vmin * 1.5) + 4vmin))/2) auto; */
+  margin: 0;
+  width: 100vmin;
+  height: 100vmax;
+  /* max-height: calc(17 * (4vmin * 1.5) + 4vmin); */
   break-after: right;
   display:inline-block;
-  /* background: aliceblue; */  /* enable to see the maximum staging area */
+  /* background: aliceblue;   */
 }
 
 .flex {
@@ -246,26 +232,6 @@ hr::before {
 
 
 /* Helper classes */
-
-p.no-indent {
-  text-indent: 0;
-  /* Continue line on a new page with break on the previous page. */
-}
-
-p.stretch-last-line {
-  text-align-last: justify;
-  /* Not supported on Safari */
-}
-
-p.squeeze-para {
-  letter-spacing: -0.5px;
-  /* Handle orphans and widows manually */
-}
-
-p.stretch-para {
-  letter-spacing: 0.5px;
-  /* Handle orphans and widows manually */
-}
 
 .uppercase {
   text-transform: uppercase;

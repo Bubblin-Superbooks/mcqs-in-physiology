@@ -1,6 +1,100 @@
-.leaf {
-    background-image: url(https://raw.githubusercontent.com/marvindanig/mcqs-in-physiology/master/assets/images/central-nervous-system.jpeg);
-    background-size: 200% 100%;
-    background-position: left center;
-    position: relative;
-  }
+header {
+  height: 50vmax;
+  width: 100vmin;
+  display: inline-block;
+  background-color: #efefef;
+  max-height: 50vmax;
+}
+
+.notifier {
+  width: 60vmin;
+  border-radius: 1.5vmin;
+  border: 1vmin solid rgba(255, 255, 255, 0.15);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  cursor: move;
+  padding: 1vmin 5vmin;
+  background-color: rgba(48, 148, 236, 0.6);
+  font-size: 70%;
+  line-height: 1.25;
+  position: relative;
+  margin: 5vmax auto;
+}
+
+div.notifier:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(0.5vmin);
+  -webkit-filter: blur(0.5vmin);
+  -moz-filter: blur(0.5vmin);
+  -o-filter: blur(0.5vmin);
+  -ms-filter: blur(0.5vmin);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+}
+
+.half {
+	max-height: 50vmax;
+  overflow: hidden;
+}
+
+.yellow {
+background-color:  yellow;
+}
+
+input[type=radio] {
+background-color: transparent;
+border: 0.25vmin solid rgba(55, 55, 255, 0.5);
+border-radius: 50%;
+box-shadow: inset 0 0 0 0 white;
+cursor: pointer;
+font: inherit;
+height: 3.2vmin;
+outline: none;
+width: 3.2vmin;
+-moz-appearance: none;
+-webkit-appearance: none;
+vertical-align: bottom;
+}
+input[type=radio]:checked {
+background-color: rgba(55, 55, 55, 1);
+box-shadow: inset 0 0 0 0.1875em #47d1da;
+-webkit-transition: background 0.15s, box-shadow 0.1s;
+transition: background 0.15s, box-shadow 0.1s;
+}
+
+.questions {
+  width: 37.5vmin;
+  font-size: 72%;
+  line-height: 1.25;
+}
+
+ol ol {
+  margin: 1vmin;
+  padding: 0;
+  list-style-type: none;
+}
+
+ol li {
+  margin: 2vmin 0;
+}
+
+ol li > ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.5vmin 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+}

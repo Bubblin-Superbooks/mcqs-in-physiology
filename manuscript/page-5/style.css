@@ -1,3 +1,7 @@
+.publisher {
+  max-height: 70vmax;
+}
+
 .footnote {
   text-align: center;
   height: 20vh;
@@ -7,13 +11,11 @@
   font-size: 3.5vw;
 }
 
-
 .pad-vertically{
-	padding-top: 10vh;
+	padding: 10vmin 0;
 }
 
 h1#title {
-  color: #594BD2;
   font-size: 5.5vmin;
   margin: 0 auto;
 }
