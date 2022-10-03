@@ -4,3 +4,34 @@
     background-position: right center;
 }
 
+.notifier {
+    position: absolute;
+    bottom: 5vmin;
+    right: 5vmin;
+    width: auto;
+    border-radius: 1.5vmin;
+    border: 1vmin solid rgba(255, 255, 255, 0.15);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    cursor: move;
+    padding: 2vmin 4vmin;
+    background-color: rgba(48, 148, 236, 0.6);
+    font-size: 70%;
+    line-height: 1.25;
+    width: 80vmin;
+}
+
+div.notifier:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(0.5vmin);
+    -webkit-filter: blur(0.5vmin);
+    -moz-filter: blur(0.5vmin);
+    -o-filter: blur(0.5vmin);
+    -ms-filter: blur(0.5vmin);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+}
