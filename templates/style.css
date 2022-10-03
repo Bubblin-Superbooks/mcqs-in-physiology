@@ -250,3 +250,135 @@ hr::before {
 .small {
   font-size: 80%;
 }
+
+header {
+  height: 50vmax;
+  width: 100vmin;
+  display: inline-block;
+  background-color: #efefef;
+  max-height: 50vmax;
+}
+
+div.notifier {
+  width: 70vmin;
+  border-radius: 1.5vmin;
+  border: 1vmin solid rgba(255, 255, 255, 0.15);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  cursor: move;
+  padding: 1vmin 5vmin;
+  background-color: rgba(48, 148, 248, 0.6);
+  font-size: 70%;
+  line-height: 1.25;
+  position: relative;
+  margin: 5vmax auto;
+}
+
+div.notifier:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(0.5vmin);
+  -webkit-filter: blur(0.5vmin);
+  -moz-filter: blur(0.5vmin);
+  -o-filter: blur(0.5vmin);
+  -ms-filter: blur(0.5vmin);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+}
+
+.notifier > ul {
+  margin: 0;
+  padding: 0;
+  list-style: circle;
+}
+
+.notifier > ul li {
+  margin: 0 0 0 4vmin;
+  padding: 0;
+}
+
+.half {
+  max-height: 50vmax;
+  overflow: hidden;
+}
+
+.full {
+  max-height: 100vmax;
+  overflow: hidden;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+input[type="radio"] {
+  background-color: transparent;
+  border: 0.25vmin solid rgba(255, 55, 55, 0.5);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0 white;
+  cursor: pointer;
+  font: inherit;
+  height: 3vmin;
+  outline: none;
+  width: 3vmin;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  vertical-align: bottom;
+}
+
+input[type="radio"]:checked {
+  background-color: rgba(255, 55, 55, 0.5);
+  box-shadow: inset 0 0 0 0.1875vmax orangered;
+  -webkit-transition: background 0.15s, box-shadow 0.1s;
+  transition: background 0.15s, box-shadow 0.1s;
+}
+
+.quiz {
+  height: inherit;
+  width: inherit;
+}
+
+.questions {
+  width: 42vmin;
+  font-size: calc(42vmin/17);
+  line-height: 1.25;
+}
+
+ol.que {
+  list-style-type: none;
+  counter-reset: step-counter calc(var(--start) - 1);
+}
+
+ol.que > li {
+  counter-increment: step-counter;
+}
+
+ol.que > li::before {
+  content: counter(step-counter)".\00a0 ";
+  margin: 0;
+}
+
+ol, ul {
+	padding: 0.5vmin;
+  margin: 0 0.5vmin;
+}
+
+ol li {
+  margin: 2vmin 0;
+  padding: 0;
+}
+
+ol li > ul li, ol.que li > ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.5vmin 0;
+}
+
+ol ol {
+  margin: 1vmin 0;
+  padding: 0;
+  list-style-type: none;
+}
