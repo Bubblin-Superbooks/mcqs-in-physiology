@@ -224,6 +224,7 @@ hr::before {
   display: flex !important;
   align-items: center;
   justify-content: center;
+  gap: 2.5vmin;
 }
 
 .justify {
