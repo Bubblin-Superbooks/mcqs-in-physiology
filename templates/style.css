@@ -209,10 +209,10 @@ hr::before {
 }
 
 .inner {
-  /* margin: calc((100vh - (17 * (4vmin * 1.5) + 4vmin))/2) auto; */
+  margin: 5vmax auto;
   margin: 0;
   width: 100vmin;
-  height: 100vmax;
+  height: 90vmax;
   /* max-height: calc(17 * (4vmin * 1.5) + 4vmin); */
   break-after: right;
   display:inline-block;
@@ -255,7 +255,7 @@ header {
   height: 50vmax;
   width: 100vmin;
   display: inline-block;
-  background-color: #efefef;
+  /* background-color: #efefef; */
   max-height: 50vmax;
 }
 
