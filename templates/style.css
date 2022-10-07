@@ -344,7 +344,7 @@ input[type="radio"]:checked {
 
 .questions {
   width: 42vmin;
-  font-size: calc(42vmin/17);
+  font-size: calc(42vmin/18);
   line-height: 1.25;
 }
 
