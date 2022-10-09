@@ -328,6 +328,7 @@ input[type="radio"] {
   -moz-appearance: none;
   -webkit-appearance: none;
   vertical-align: bottom;
+  margin: 0 1vmin;
 }
 
 input[type="radio"]:checked {
@@ -346,6 +347,7 @@ input[type="radio"]:checked {
   width: 42vmin;
   font-size: calc(42vmin/18);
   line-height: 1.25;
+  text-align: left;
 }
 
 ol.que {
