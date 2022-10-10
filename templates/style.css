@@ -361,6 +361,9 @@ input[type="radio"]:checked {
 ol.que {
   list-style-type: none;
   counter-reset: step-counter calc(var(--start) - 1);
+	padding: 0.5vmin;
+  margin: 0 0 0 2vmin;
+
 }
 
 ol.que > li {
@@ -375,7 +378,7 @@ ol.que > li::before {
 
 ol, ul {
 	padding: 0.5vmin;
-  margin: 0 0.5vmin;
+  margin: 0 0 0 2vmin;
 }
 
 ol li {
