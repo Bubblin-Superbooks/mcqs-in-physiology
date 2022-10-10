@@ -315,6 +315,14 @@ div.notifier:before {
   background-color: rgb(252, 252, 106);
 }
 
+label {
+  display: grid;
+  gap: 0.5vmin;
+  grid-template-columns: 4vmin 1fr;  
+  align-items: top;
+  justify-content: center;
+}
+
 input[type="radio"] {
   background-color: transparent;
   border: 0.25vmin solid rgba(255, 55, 55, 0.5);
@@ -323,12 +331,12 @@ input[type="radio"] {
   cursor: pointer;
   font: inherit;
   height: 3vmin;
-  outline: none;
   width: 3vmin;
+  outline: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   vertical-align: bottom;
-  margin: 0 1vmin;
+  margin: 0;
 }
 
 input[type="radio"]:checked {
@@ -357,6 +365,7 @@ ol.que {
 
 ol.que > li {
   counter-increment: step-counter;
+  text-align: left;
 }
 
 ol.que > li::before {
